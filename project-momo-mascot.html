@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoMo Mascot Gen-AI - Project Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+        /* Lightbox styles */
+        #lightbox { transition: opacity 0.3s ease; }
+    </style>
+</head>
+<body class="bg-[#111827] text-white antialiased selection:bg-orange-500 selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#111827]/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html#projects" class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white font-bold rounded-full text-sm hover:bg-orange-600 transition shadow-lg">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            
+            <div class="flex items-center gap-2 px-4 py-2 bg-[#1f2937] border border-pink-500 text-pink-500 font-bold rounded-full text-sm">
+                <i class="fas fa-robot"></i> Internal Project
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop" 
+                 alt="AI Background" 
+                 class="w-full h-full object-cover opacity-20 blur-sm">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#111827]/80 via-[#111827]/90 to-[#111827]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center animate-fade-in">
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span class="px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full shadow-lg shadow-indigo-600/30">Generative AI</span>
+                <span class="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full shadow-lg shadow-green-600/30">Stable Diffusion</span>
+                <span class="px-3 py-1 bg-yellow-600 text-white text-xs font-bold rounded-full shadow-lg shadow-yellow-600/30">Award Winner</span>
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">MoMo Mascot Generative-AI</h1>
+            
+            <div class="flex items-center justify-center gap-6 text-gray-400 text-sm font-medium">
+                <span class="flex items-center gap-2"><i class="fas fa-building"></i> MoMo</span>
+                <span class="flex items-center gap-2"><i class="far fa-calendar-alt"></i> 2023</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6 pb-20 max-w-5xl space-y-12 -mt-10 relative z-20">
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl animate-fade-in">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
+                        <i class="fas fa-bullseye text-red-500 text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-yellow-400 mb-2">Problem Statement</h3>
+                        <p class="text-gray-300 leading-relaxed text-sm">
+                            Teams across branding, events, and product needed instant mascot visuals tailored to specific themes or contexts without waiting for designer availability. The challenge was creating consistent, high-quality MoMo mascot images that could be generated on-demand for various internal campaigns and events.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl animate-fade-in" style="animation-delay: 0.1s;">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
+                        <i class="fas fa-bolt text-blue-500 text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-yellow-400 mb-2">Solution Approach</h3>
+                        <p class="text-gray-300 leading-relaxed text-sm">
+                            Led a Generative AI initiative using Stable Diffusion to generate MoMo Mascot images based on natural language prompts. Gathered requirements from internal stakeholders, defined prompt logic and parameters for quality consistency, and coordinated integration with internal tools while collaborating with engineers for seamless deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8 animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-2">Project Overview</h3>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                <img src="z6846793008372_e2c0eaafe38c4861ad48978d74c53c54_1753629950360.jpg" 
+                     alt="MoMo Mascot AI Presentation at Techday" 
+                     class="w-full h-auto object-cover">
+                <div class="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm p-2 text-center">
+                    <p class="text-xs text-gray-300">MoMo Mascot AI Presentation at Techday</p>
+                </div>
+            </div>
+
+            <div class="relative max-w-sm mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#1f2937]">
+                <img src="z6846792983328_b40b1ade820c3016350c3b4ee6f47e12_1753630001352.jpg" 
+                     alt="MoMo Challenge App Interface" 
+                     class="w-full h-auto object-cover">
+                <div class="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm p-3 text-center">
+                    <p class="text-xs text-gray-300">MoMo Challenge App Integration</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#262f3e] border border-gray-600 rounded-2xl p-8 md:p-10 shadow-2xl animate-fade-in" style="animation-delay: 0.4s;">
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-code-branch text-blue-400 text-xl"></i>
+                        <h3 class="text-xl font-bold text-yellow-400">My Contributions</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-orange-400 font-bold text-sm mb-2">Requirements Gathering</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Gathered requirements from internal stakeholders across branding, events, and product teams.</li>
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Identified key use cases for mascot generation across different campaign contexts.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-orange-400 font-bold text-sm mb-2">AI Model Optimization</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Trained a model on Stable Diffusion to generate custom MoMo Mascot from text prompts.</li>
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Curated a dataset, fine-tuned the model for style consistency, and optimized for high-quality outputs.</li>
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Defined prompt logic and parameters to fine-tune mascot generation quality.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-orange-400 font-bold text-sm mb-2">Integration & Deployment</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-gray-300 text-sm"><span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span> Collaborated with engineers to deploy the solution for internal use cases with focus on ease of use.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-trophy text-yellow-500 text-xl"></i>
+                        <h3 class="text-xl font-bold text-yellow-400">Project Impact</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Won "First Real-World Application" award at MoMo Techday.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Became one of the earliest Generative AI solutions adopted at MoMo.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Successfully used in MoMo Challenge campaign.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Implemented in MoMo Generative AI Techday event.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Deployed for MoMo Football Tournament mascot visuals.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <p class="text-gray-300 text-sm">Enabled instant mascot generation within seconds without designer dependency.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+         <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="flex items-center gap-3 mb-8 border-b border-gray-600 pb-4">
+                <i class="fas fa-images text-pink-400 text-2xl"></i>
+                <h3 class="text-2xl font-bold text-yellow-400">AI Generated Gallery</h3>
+            </div>
+
+            <p class="text-gray-400 text-sm mb-6">A collection of mascot variations generated by our fine-tuned Stable Diffusion model. Click to enlarge.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/00124-4060199464_1753631737926.png')">
+                    <img src="mascot_pics/00124-4060199464_1753631737926.png" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/00211-2373794203_1753632338282.png')">
+                    <img src="mascot_pics/00211-2373794203_1753632338282.png" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z4463013389216_dea4fd6b841752a621e49443247b27a1_1753632353048.jpg')">
+                    <img src="mascot_pics/z4463013389216_dea4fd6b841752a621e49443247b27a1_1753632353048.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z4470664373443_695af57e4253d1bd422b75af487bc51f_1753632353048.jpg')">
+                    <img src="mascot_pics/z4470664373443_695af57e4253d1bd422b75af487bc51f_1753632353048.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z4470883720380_74980cafe91e0737ec74463e4818a8e3_1753632353048.jpg')">
+                    <img src="mascot_pics/z4470883720380_74980cafe91e0737ec74463e4818a8e3_1753632353048.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z4482791988933_b0a249367a63adf3bb4750e9ba3c1f17_1753632353049.jpg')">
+                    <img src="mascot_pics/z4482791988933_b0a249367a63adf3bb4750e9ba3c1f17_1753632353049.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z4508443026496_0b76cb42da17a62238726dbfe738a82d_1753632353049.jpg')">
+                    <img src="mascot_pics/z4508443026496_0b76cb42da17a62238726dbfe738a82d_1753632353049.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition border border-gray-600" onclick="openModal('mascot_pics/z5095124596315_52a0c4f0adae4b2e505d4e32b5438500_1753632353049.jpg')">
+                    <img src="mascot_pics/z5095124596315_52a0c4f0adae4b2e505d4e32b5438500_1753632353049.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-10 pb-6 animate-fade-in" style="animation-delay: 0.5s;">
+            <p class="text-gray-400 text-sm mb-4">Interested in learning more?</p>
+            <a href="index.html#contact" class="inline-block px-8 py-3 bg-transparent border border-yellow-500 text-yellow-500 font-bold rounded-lg hover:bg-yellow-500 hover:text-gray-900 transition">
+                Get In Touch
+            </a>
+        </div>
+
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden items-center justify-center p-4 cursor-zoom-out" onclick="closeModal()">
+        <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl object-contain transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 focus:outline-none">&times;</button>
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openModal(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            // Small animation for image
+            setTimeout(() => lightboxImg.classList.remove('scale-95'), 10);
+        }
+
+        function closeModal() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.classList.add('scale-95');
+            lightboxImg.src = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+</html>

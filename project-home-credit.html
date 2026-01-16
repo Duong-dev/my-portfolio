@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Credit Card - Project Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#111827] text-white antialiased selection:bg-orange-500 selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-[#111827]/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html#projects" class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white font-bold rounded-full text-sm hover:bg-orange-600 transition shadow-lg">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            
+            <a href="https://www.homecredit.vn/the-tin-dung-online" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-[#1f2937] border border-yellow-500 text-yellow-500 font-bold rounded-full text-sm hover:bg-yellow-500 hover:text-white transition">
+                <i class="fas fa-globe"></i> View Product
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Project Banner" 
+                 class="w-full h-full object-cover opacity-20 blur-sm">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#111827]/80 via-[#111827]/90 to-[#111827]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center animate-fade-in">
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span class="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full shadow-lg shadow-blue-600/30">Fintech</span>
+                <span class="px-3 py-1 bg-orange-600 text-white text-xs font-bold rounded-full shadow-lg shadow-orange-600/30">Credit Card</span>
+                <span class="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full shadow-lg shadow-green-600/30">Biometrics</span>
+                <span class="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full shadow-lg shadow-purple-600/30">NFC</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Home Credit Card</h1>
+            
+            <div class="flex items-center justify-center gap-6 text-gray-400 text-sm font-medium">
+                <span class="flex items-center gap-2"><i class="fas fa-building"></i> Home Credit</span>
+                <span class="flex items-center gap-2"><i class="far fa-calendar-alt"></i> 2024 - Now</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6 pb-20 max-w-5xl space-y-8 -mt-10 relative z-20">
+
+        <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl animate-fade-in">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
+                    <i class="fas fa-bullseye text-red-500 text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">Problem Statement</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Home Credit needed to enhance their digital credit card offering by introducing key features such as NFC-based verification and Face Authentication, while optimizing the application flow across web and mobile platforms to improve user experience and security.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl animate-fade-in" style="animation-delay: 0.1s;">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
+                    <i class="fas fa-bolt text-blue-500 text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">Solution Approach</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Led cross-functional collaboration with local and international teams to deliver comprehensive requirement documentation, technical coordination, and project management for integrating biometric verification features into the credit card application process.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-xl text-center animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <i class="fas fa-mobile-alt text-blue-400"></i>
+                <h3 class="text-xl font-bold text-yellow-400">Mobile Interface</h3>
+            </div>
+            
+            <div class="relative max-w-sm mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#1f2937]">
+                
+                <img src="image_1754331184172.png" 
+                     alt="Home Credit Mobile App Interface" 
+                     class="w-full h-auto object-cover">
+                     
+            </div>
+            
+            <p class="text-gray-400 text-xs mt-6 italic">Home Credit Card mobile interface showing enhanced features including NFC verification and card management.</p>
+        </div>
+
+        <div class="bg-[#262f3e] border border-gray-600 rounded-2xl p-8 md:p-10 shadow-2xl animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="flex items-center gap-3 mb-8 border-b border-gray-600 pb-4">
+                <i class="fas fa-user-edit text-green-400 text-2xl"></i>
+                <h3 class="text-2xl font-bold text-yellow-400">My Contributions</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-orange-400 font-bold text-sm uppercase tracking-wide mb-4">Stakeholder Collaboration</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Worked closely with the Product Owner, Designer, and Frontend Developers to align on optimal UI/UX flows.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Liaised with the Business Unit to understand credit card operations, regulatory requirements, and internal processes.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Coordinated with the Solution Architect team in the Czech Republic to define technical solutions (NFC, Face Auth).</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Collaborated with multiple technical teams to ensure smooth integration of new components into existing systems.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-orange-400 font-bold text-sm uppercase tracking-wide mb-4">Requirement Documentation</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Delivered detailed SRS (Software Requirements Specification) to define product behavior and business logic.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Authored internal API specifications for FE and BE teams.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Created Sequence Diagrams to visualize system workflows and integration points across modules.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-orange-400 font-bold text-sm uppercase tracking-wide mb-4">Project Coordination</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Defined User Stories in Jira and assigned tasks to relevant FE, BE, and QC team members.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Participated in sprint planning, resource allocation, and timeline estimation to ensure on-time delivery.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-orange-400 font-bold text-sm uppercase tracking-wide mb-4">Product Validation</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-300 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-yellow-500 rounded-full shrink-0"></span>
+                            <span>Conducted UAT and ensured the final product met business requirements and functioned as intended across all supported platforms.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#1f2937] border border-green-500/30 rounded-2xl p-8 shadow-xl animate-fade-in" style="animation-delay: 0.4s;">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                    <i class="fas fa-check text-white text-sm"></i>
+                </div>
+                <h3 class="text-xl font-bold text-yellow-400">Outcome</h3>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="flex gap-4">
+                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                    <p class="text-gray-300 text-sm">Successfully enhanced the online credit card application experience, with added biometric verification features.</p>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                    <p class="text-gray-300 text-sm">Improved customer onboarding speed and security by integrating NFC and Face Authentication.</p>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                    <p class="text-gray-300 text-sm">Delivered a scalable solution through collaboration between cross-functional teams in Vietnam and Europe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-10 pb-6 animate-fade-in" style="animation-delay: 0.5s;">
+            <p class="text-gray-400 text-sm mb-4">Interested in learning more?</p>
+            <a href="index.html#contact" class="inline-block px-8 py-3 bg-transparent border border-yellow-500 text-yellow-500 font-bold rounded-lg hover:bg-yellow-500 hover:text-gray-900 transition">
+                Get In Touch
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
