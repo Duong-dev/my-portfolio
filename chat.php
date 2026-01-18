@@ -1,7 +1,7 @@
 <?php
 // chat.php - File trung gian để bảo mật API Key
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *'); // Có thể thay * bằng https://duongle.space để chặn domain khác
+header('Access-Control-Allow-Origin: https://duongle.space'); 
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 

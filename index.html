@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Duc Duong - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
-        .animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Custom Scrollbar styling */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #111827; }
-        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
-        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+
         /* Text clamp */
         .line-clamp-3 {
             display: -webkit-box;
@@ -31,28 +62,30 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVPH13N1LQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-CVPH13N1LQ');
     </script>
 </head>
+
 <body class="bg-[#111827] text-white antialiased selection:bg-orange-500 selection:text-white">
 
     <div class="relative min-h-screen w-full overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?q=80&w=2070&auto=format&fit=crop" 
-                 alt="Mountain Background" 
-                 class="w-full h-full object-cover opacity-90">
+            <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?q=80&w=2070&auto=format&fit=crop"
+                alt="Mountain Background" class="w-full h-full object-cover opacity-90">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111827]"></div>
         </div>
 
         <nav class="relative z-50 w-full pt-6 px-8 flex justify-between items-center container mx-auto">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/30">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/30">
                     <i class="fas fa-mountain text-white text-lg"></i>
                 </div>
-                <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+                <span
+                    class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
                     Le Duc Duong
                 </span>
             </div>
@@ -63,24 +96,28 @@
                 <a href="#career" class="hover:text-yellow-400 transition-colors">Career</a>
                 <a href="#projects" class="hover:text-yellow-400 transition-colors">Projects</a>
                 <a href="#services" class="hover:text-yellow-400 transition-colors">Services</a>
-                <a href="#contact" class="px-5 py-2 bg-white/10 hover:bg-white/20 border border-white/30 rounded-full text-white text-xs font-bold transition-all">
+                <a href="#contact"
+                    class="px-5 py-2 bg-white/10 hover:bg-white/20 border border-white/30 rounded-full text-white text-xs font-bold transition-all">
                     CONTACT ME
                 </a>
             </div>
         </nav>
 
         <div class="relative z-10 container mx-auto px-4 h-[calc(100vh-80px)] flex items-center justify-center">
-            <div class="relative w-full max-w-4xl p-1 bg-gradient-to-br from-white/20 to-white/5 rounded-[2.5rem] shadow-2xl backdrop-blur-md border border-white/10">
+            <div
+                class="relative w-full max-w-4xl p-1 bg-gradient-to-br from-white/20 to-white/5 rounded-[2.5rem] shadow-2xl backdrop-blur-md border border-white/10">
                 <div class="bg-black/20 rounded-[2.3rem] p-8 md:p-12 text-center flex flex-col items-center gap-6">
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-                        <img src="avatar.jpeg" 
-                             alt="Le Duc Duong" 
-                             class="relative w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-yellow-400 shadow-2xl">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500">
+                        </div>
+                        <img src="avatar.jpeg" alt="Le Duc Duong"
+                            class="relative w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-yellow-400 shadow-2xl">
                     </div>
                     <div class="space-y-2 mt-4">
                         <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-                            <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 drop-shadow-sm">
+                            <span
+                                class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 drop-shadow-sm">
                                 Le Duc Duong
                             </span>
                         </h1>
@@ -89,13 +126,17 @@
                         </p>
                     </div>
                     <p class="text-gray-300 max-w-2xl text-base md:text-lg leading-relaxed font-light">
-                        Strategic Business Analyst with hands-on project management experience. I align stakeholders, translate business needs into clear specs, and ensure smooth delivery across the full product lifecycle.
+                        Strategic Business Analyst with hands-on project management experience. I align stakeholders,
+                        translate business needs into clear specs, and ensure smooth delivery across the full product
+                        lifecycle.
                     </p>
                     <div class="flex flex-col md:flex-row gap-4 mt-4 w-full justify-center">
-                        <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full text-white font-semibold shadow-lg hover:-translate-y-1 transition-all">
+                        <a href="#projects"
+                            class="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full text-white font-semibold shadow-lg hover:-translate-y-1 transition-all">
                             Explore My Work
                         </a>
-                        <a href="#contact" class="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-full text-white font-semibold backdrop-blur-sm transition-all hover:-translate-y-1">
+                        <a href="#contact"
+                            class="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-full text-white font-semibold backdrop-blur-sm transition-all hover:-translate-y-1">
                             Get In Touch
                         </a>
                     </div>
@@ -107,17 +148,23 @@
     <section id="about" class="py-20 bg-[#111827]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-yellow-400 inline-block border-b-2 border-yellow-500 pb-2">About Me</h2>
+                <h2 class="text-3xl font-bold text-yellow-400 inline-block border-b-2 border-yellow-500 pb-2">About Me
+                </h2>
             </div>
-            <div class="max-w-4xl mx-auto bg-[#1f2937] border border-gray-700 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
+            <div
+                class="max-w-4xl mx-auto bg-[#1f2937] border border-gray-700 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl">
+                </div>
                 <div class="text-center relative z-10">
                     <h3 class="text-xl font-bold text-yellow-400 mb-6">Professional Background</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed">
-                        Results-oriented Senior Business Analyst with a proven track record in leading cross-functional teams and delivering successful projects in the logistics, insurtech, and fintech industries.
+                        Results-oriented Senior Business Analyst with a proven track record in leading cross-functional
+                        teams and delivering successful projects in the logistics, insurtech, and fintech industries.
                     </p>
                     <p class="text-gray-300 mb-10 leading-relaxed">
-                        With expertise spanning from software engineering to business analysis, I bring a unique technical perspective to business challenges, ensuring solutions are both innovative and implementable.
+                        With expertise spanning from software engineering to business analysis, I bring a unique
+                        technical perspective to business challenges, ensuring solutions are both innovative and
+                        implementable.
                     </p>
                     <div class="grid grid-cols-3 gap-8 border-t border-gray-700 pt-8">
                         <div>
@@ -149,7 +196,8 @@
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
                 <div class="md:col-span-4 flex flex-col gap-3" id="company-list"></div>
                 <div class="md:col-span-8">
-                    <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 min-h-[500px] shadow-xl relative" id="job-detail-content"></div>
+                    <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 min-h-[500px] shadow-xl relative"
+                        id="job-detail-content"></div>
                 </div>
             </div>
         </div>
@@ -163,7 +211,8 @@
                 <div class="w-16 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            </div>
         </div>
     </section>
 
@@ -176,13 +225,16 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-600/30">
+
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-600/30">
                         <i class="fas fa-search text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">Requirements Gathering</h3>
-                    <p class="text-gray-300 text-sm mb-4">Comprehensive analysis of business needs and stakeholder requirements</p>
+                    <p class="text-gray-300 text-sm mb-4">Comprehensive analysis of business needs and stakeholder
+                        requirements</p>
                     <ul class="text-xs text-gray-400 space-y-2 text-left px-4 list-disc">
                         <li>Stakeholder interviews</li>
                         <li>Business process mapping</li>
@@ -191,8 +243,10 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
                         <i class="fas fa-tasks text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">Project Management</h3>
@@ -205,8 +259,10 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/30">
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/30">
                         <i class="fas fa-users text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">Stakeholder Management</h3>
@@ -219,8 +275,10 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-500/30">
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-500/30">
                         <i class="fas fa-cogs text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">System Integration</h3>
@@ -233,12 +291,15 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
                         <i class="fas fa-chart-line text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">Business Analysis</h3>
-                    <p class="text-gray-300 text-sm mb-4">Transforming business needs into actionable technical solutions</p>
+                    <p class="text-gray-300 text-sm mb-4">Transforming business needs into actionable technical
+                        solutions</p>
                     <ul class="text-xs text-gray-400 space-y-2 text-left px-4 list-disc">
                         <li>Requirements gathering & documentation</li>
                         <li>Stakeholder communication & alignment</li>
@@ -247,12 +308,15 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-600/30">
+                <div
+                    class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 hover:shadow-lg transition-all text-center">
+                    <div
+                        class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-600/30">
                         <i class="fas fa-file-alt text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-yellow-400 mb-4">Documentation</h3>
-                    <p class="text-gray-300 text-sm mb-4">Creating clear, structured technical and business documentation</p>
+                    <p class="text-gray-300 text-sm mb-4">Creating clear, structured technical and business
+                        documentation</p>
                     <ul class="text-xs text-gray-400 space-y-2 text-left px-4 list-disc">
                         <li>SRS (Software Requirement Specification)</li>
                         <li>API specifications for FE/BE integration</li>
@@ -274,10 +338,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                
+
                 <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-lg">
                     <h3 class="text-xl font-bold text-yellow-400 mb-8">Contact Information</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center shrink-0">
@@ -285,7 +349,8 @@
                             </div>
                             <div>
                                 <p class="text-gray-400 text-xs uppercase">Email</p>
-                                <a href="mailto:leduc.duong2807@gmail.com" class="text-white font-semibold hover:text-yellow-400 transition">leduc.duong2807@gmail.com</a>
+                                <a href="mailto:leduc.duong2807@gmail.com"
+                                    class="text-white font-semibold hover:text-yellow-400 transition">leduc.duong2807@gmail.com</a>
                             </div>
                         </div>
 
@@ -305,35 +370,43 @@
                             </div>
                             <div>
                                 <p class="text-gray-400 text-xs uppercase">LinkedIn</p>
-                                <a href="https://www.linkedin.com/in/duongle2807/" class="text-white font-semibold hover:text-yellow-400 transition">LinkedIn Profile</a>
+                                <a href="https://www.linkedin.com/in/duongle2807/"
+                                    class="text-white font-semibold hover:text-yellow-400 transition">LinkedIn
+                                    Profile</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="Le-Duc-Duong-resume.pdf" download class="block w-full mt-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-bold text-center rounded-lg hover:shadow-lg hover:brightness-110 transition-all">
+                    <a href="Le-Duc-Duong-resume.pdf" download
+                        class="block w-full mt-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-bold text-center rounded-lg hover:shadow-lg hover:brightness-110 transition-all">
                         <i class="fas fa-download mr-2"></i> Export CV Report
                     </a>
                 </div>
 
                 <div class="bg-[#1f2937] border border-gray-700 rounded-2xl p-8 shadow-lg">
                     <h3 class="text-xl font-bold text-yellow-400 mb-8">Portfolio Links</h3>
-                    
+
                     <div class="space-y-4">
-                        <a href="https://www.figma.com/proto/sigYX27odpls8RB6zOTY9Y/K10A-Team-4?node-id=885-21910&scaling=min-zoom&page-id=885%3A21909&starting-point-node-id=885%3A21910&hide-ui=1" target="_blank" class="block bg-[#374151] p-4 rounded-xl hover:bg-[#4b5563] transition group border border-gray-600">
+                        <a href="https://www.figma.com/proto/sigYX27odpls8RB6zOTY9Y/K10A-Team-4?node-id=885-21910&scaling=min-zoom&page-id=885%3A21909&starting-point-node-id=885%3A21910&hide-ui=1"
+                            target="_blank"
+                            class="block bg-[#374151] p-4 rounded-xl hover:bg-[#4b5563] transition group border border-gray-600">
                             <div class="flex items-center gap-4">
                                 <div class="text-2xl text-purple-400"><i class="fab fa-figma"></i></div>
                                 <div>
-                                    <h4 class="text-white font-bold group-hover:text-yellow-400 transition">Figma Portfolio</h4>
+                                    <h4 class="text-white font-bold group-hover:text-yellow-400 transition">Figma
+                                        Portfolio</h4>
                                     <p class="text-xs text-gray-400">Design mockups and prototypes</p>
                                 </div>
                             </div>
                         </a>
 
-                        <a href="https://public.tableau.com/app/profile/duong5413/vizzes" target="_blank" class="block bg-[#374151] p-4 rounded-xl hover:bg-[#4b5563] transition group border border-gray-600">
+                        <a href="https://public.tableau.com/app/profile/duong5413/vizzes" target="_blank"
+                            class="block bg-[#374151] p-4 rounded-xl hover:bg-[#4b5563] transition group border border-gray-600">
                             <div class="flex items-center gap-4">
                                 <div class="text-2xl text-blue-400"><i class="fas fa-chart-bar"></i></div>
                                 <div>
-                                    <h4 class="text-white font-bold group-hover:text-yellow-400 transition">Tableau Public</h4>
+                                    <h4 class="text-white font-bold group-hover:text-yellow-400 transition">Tableau
+                                        Public</h4>
                                     <p class="text-xs text-gray-400">Data visualization projects</p>
                                 </div>
                             </div>
@@ -342,7 +415,7 @@
                 </div>
 
             </div>
-            
+
             <div class="mt-16 text-center border-t border-gray-800 pt-8">
                 <p class="text-gray-500 text-sm">&copy; 2024 Le Duc Duong. All rights reserved.</p>
             </div>
@@ -353,7 +426,7 @@
         const careerData = [
             {
                 id: 'solekia',
-                logo: 'image_7d3c4d.png', 
+                logo: 'image_7d3c4d.png',
                 name: 'SOLEKIA',
                 period: '2016-2018',
                 role: 'Software Engineer',
@@ -368,7 +441,7 @@
             },
             {
                 id: 'pasona',
-                logo: 'image_7d43eb.png', 
+                logo: 'image_7d43eb.png',
                 name: 'PASONA Tech',
                 period: '2018-2019',
                 role: 'Software Engineer',
@@ -383,7 +456,7 @@
             },
             {
                 id: 'dhl',
-                logo: 'image_7d442e.png', 
+                logo: 'image_7d442e.png',
                 name: 'DHL EXPRESS',
                 period: '2019-2021',
                 role: 'Business Analyst',
@@ -398,7 +471,7 @@
             },
             {
                 id: 'momo',
-                logo: 'image_7d44aa.png', 
+                logo: 'image_7d44aa.png',
                 name: 'M_Service',
                 period: '2021-2024',
                 role: 'Senior Business Analyst',
@@ -413,7 +486,7 @@
             },
             {
                 id: 'homecredit',
-                logo: 'image_7d478f.png', 
+                logo: 'image_7d478f.png',
                 name: 'HOME CREDIT',
                 period: '2024-Now',
                 role: 'IT Software Analyst',
@@ -519,23 +592,23 @@
             careerData.forEach(company => {
                 const isActive = company.id === activeCompanyId;
                 const btn = document.createElement('div');
-                
-                const activeClasses = isActive 
-                    ? 'bg-[#374151] border-yellow-500 shadow-lg' 
+
+                const activeClasses = isActive
+                    ? 'bg-[#374151] border-yellow-500 shadow-lg'
                     : 'bg-[#1f2937] border-transparent hover:bg-[#374151]/50';
-                
+
                 btn.className = `cursor-pointer p-4 rounded-xl flex items-center justify-between transition-all duration-300 border-2 ${activeClasses}`;
-                
+
                 btn.onclick = () => {
                     activeCompanyId = company.id;
                     renderCompanyList();
                     renderJobDetail();
                 };
-                
-                const statusIndicator = company.isCurrent 
-                    ? `<div class="w-3 h-3 bg-yellow-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(250,204,21,0.8)]" title="Current Position"></div>` 
+
+                const statusIndicator = company.isCurrent
+                    ? `<div class="w-3 h-3 bg-yellow-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(250,204,21,0.8)]" title="Current Position"></div>`
                     : ``;
-                
+
                 btn.innerHTML = `
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden shadow-sm border border-gray-500/30">
@@ -555,10 +628,10 @@
         function renderJobDetail() {
             const company = careerData.find(c => c.id === activeCompanyId);
             const container = document.getElementById('job-detail-content');
-            
+
             container.style.opacity = 0;
-            container.classList.remove('animate-fade-in'); 
-            
+            container.classList.remove('animate-fade-in');
+
             setTimeout(() => {
                 container.innerHTML = `
                     <div class="flex items-center gap-4 mb-8">
@@ -640,11 +713,11 @@
         renderCompanyList();
         renderJobDetail();
         renderProjects();
-        
+
         // --- EVENT TRACKING ---
         // Ví dụ: Theo dõi khi người dùng bấm vào bất kỳ nút nào dẫn đến phần Liên hệ (#contact)
-        document.querySelectorAll('a[href="#contact"]').forEach(function(button) {
-            button.addEventListener('click', function() {
+        document.querySelectorAll('a[href="#contact"]').forEach(function (button) {
+            button.addEventListener('click', function () {
                 // Kiểm tra xem GA đã tải chưa để tránh lỗi
                 if (typeof gtag === 'function') {
                     gtag('event', 'click_contact', {
@@ -656,8 +729,8 @@
         });
 
         // Tracking khi người dùng bấm Download CV (tìm các thẻ a có link kết thúc bằng .pdf)
-        document.querySelectorAll('a[href$=".pdf"]').forEach(function(button) {
-            button.addEventListener('click', function() {
+        document.querySelectorAll('a[href$=".pdf"]').forEach(function (button) {
+            button.addEventListener('click', function () {
                 if (typeof gtag === 'function') {
                     gtag('event', 'download_cv', {
                         'event_category': 'Engagement',
@@ -670,12 +743,12 @@
         // --- CHATBOT LOGIC (SECURE PROXY) ---
         let chatHistory = [];
 
-        window.toggleChat = function() {
+        window.toggleChat = function () {
             const chatWindow = document.getElementById('chat-window');
             if (chatWindow) chatWindow.classList.toggle('hidden');
         }
 
-        window.sendMessage = async function() {
+        window.sendMessage = async function () {
             const input = document.getElementById('chat-input');
             const message = input.value.trim();
             if (!message) return;
@@ -695,18 +768,39 @@
             chatHistory.push({ role: "user", parts: [{ text: message }] });
 
             try {
-                // GỌI ĐẾN FILE PHP TRÊN SERVER
-                const response = await fetch('chat.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        systemInstruction: { parts: [{ text: systemPrompt }] },
-                        contents: chatHistory
-                    })
-                });
+                const API_KEY = 'AIzaSyBC3NlF_dk-UAeir2qVXxCGberW-GNuS4s';
+                const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            contents: [{
+                                parts: [{
+                                    text: "Câu hỏi của người dùng: " + userMessage // Biến chứa tin nhắn người dùng nhập vào
+                                }]
+                            }]
+                        })
+                    });
+
+                    if (!response.ok) throw new Error('API Error');
+
+                    const data = await response.json();
+                    const botReply = data.candidates[0].content.parts[0].text;
+
+                    // ... Code hiển thị botReply ra màn hình chat ...
+
+                } catch (error) {
+                    console.error("Lỗi:", error);
+                    // ... Code hiển thị thông báo lỗi cho người dùng ...
+                }
+
 
                 const data = await response.json();
-                
+
                 if (data.candidates && data.candidates[0].content) {
                     const reply = data.candidates[0].content.parts[0].text;
                     removeMessage(loadingId);
@@ -726,35 +820,37 @@
             const messagesDiv = document.getElementById('chat-messages');
             const div = document.createElement('div');
             div.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'}`;
-            
+
             const bubble = document.createElement('div');
-            bubble.className = role === 'user' 
-                ? 'bg-yellow-500 text-white rounded-2xl rounded-tr-none px-4 py-2 text-sm max-w-[80%]' 
+            bubble.className = role === 'user'
+                ? 'bg-yellow-500 text-white rounded-2xl rounded-tr-none px-4 py-2 text-sm max-w-[80%]'
                 : 'bg-[#374151] text-gray-200 rounded-2xl rounded-tl-none px-4 py-2 text-sm max-w-[80%]';
-            
+
             if (isLoading) {
                 bubble.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Thinking...';
                 div.id = 'loading-msg';
             } else {
-                bubble.innerText = text; 
+                bubble.innerText = text;
             }
             div.appendChild(bubble);
             messagesDiv.appendChild(div);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
             return div.id;
         }
-        function removeMessage(id) { const el = document.getElementById(id); if(el) el.remove(); }
+        function removeMessage(id) { const el = document.getElementById(id); if (el) el.remove(); }
     </script>
 
     <!-- CHATBOT UI -->
     <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
-        <div id="chat-window" class="hidden w-[350px] h-[500px] bg-[#1f2937] border border-gray-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right">
+        <div id="chat-window"
+            class="hidden w-[350px] h-[500px] bg-[#1f2937] border border-gray-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right">
             <div class="bg-gradient-to-r from-yellow-500 to-orange-600 p-4 flex justify-between items-center">
                 <div class="flex items-center gap-2">
                     <i class="fas fa-robot text-white"></i>
                     <span class="font-bold text-white text-sm">Duong's AI Assistant</span>
                 </div>
-                <button onclick="toggleChat()" class="text-white hover:text-gray-200"><i class="fas fa-times"></i></button>
+                <button onclick="toggleChat()" class="text-white hover:text-gray-200"><i
+                        class="fas fa-times"></i></button>
             </div>
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-[#111827]">
                 <div class="flex justify-start">
@@ -764,15 +860,17 @@
                 </div>
             </div>
             <div class="p-3 bg-[#1f2937] border-t border-gray-700 flex gap-2">
-                <input type="text" id="chat-input" placeholder="Ask me something..." 
-                       class="flex-1 bg-[#111827] border border-gray-600 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-yellow-500 transition-colors"
-                       onkeypress="if(event.key === 'Enter') sendMessage()">
-                <button onclick="sendMessage()" class="w-10 h-10 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full flex items-center justify-center transition-colors shadow-lg">
+                <input type="text" id="chat-input" placeholder="Ask me something..."
+                    class="flex-1 bg-[#111827] border border-gray-600 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-yellow-500 transition-colors"
+                    onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()"
+                    class="w-10 h-10 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full flex items-center justify-center transition-colors shadow-lg">
                     <i class="fas fa-paper-plane text-xs"></i>
                 </button>
             </div>
         </div>
-        <button onclick="toggleChat()" class="w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group">
+        <button onclick="toggleChat()"
+            class="w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group">
             <i class="fas fa-comment-dots text-2xl text-white group-hover:animate-pulse"></i>
         </button>
     </div>
