@@ -112,7 +112,7 @@
                             class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500">
                         </div>
                         <img src="avatar.jpeg" alt="Le Duc Duong"
-                            class="relative w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-yellow-400 shadow-2xl">
+                            class="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-yellow-400 shadow-2xl">
                     </div>
                     <div class="space-y-2 mt-4">
                         <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
@@ -859,10 +859,17 @@
                 </button>
             </div>
         </div>
-        <button onclick="toggleChat()"
-            class="w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group">
-            <i class="fas fa-comment-dots text-2xl text-white group-hover:animate-pulse"></i>
-        </button>
+        <div class="relative group">
+            <!-- Hiệu ứng sóng lan tỏa (Ping) để thu hút sự chú ý -->
+            <span class="absolute inset-0 rounded-full bg-orange-500 opacity-75 animate-ping pointer-events-none"></span>
+            
+            <button onclick="toggleChat()"
+                class="relative w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 z-10">
+                <i class="fas fa-comment-dots text-2xl text-white"></i>
+                <!-- Chấm đỏ thông báo giả lập -->
+                <span class="absolute top-0 right-0 block h-3.5 w-3.5 rounded-full ring-2 ring-[#111827] bg-red-500"></span>
+            </button>
+        </div>
     </div>
 </body>
 
