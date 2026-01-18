@@ -6,7 +6,7 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // 1. CẤU HÌNH API KEY TẠI ĐÂY (Server-side, người dùng không thấy được)
-$apiKey = "AIzaSyBC3NlF_dk-UAeir2qVXxCGberW-GNuS4s"; 
+$apiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"; 
 
 // 2. Nhận dữ liệu từ trình duyệt gửi lên
 $inputJSON = file_get_contents('php://input');
