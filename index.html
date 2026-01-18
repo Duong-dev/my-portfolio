@@ -774,7 +774,7 @@
                 const REVERSED_API_KEY = 'EdFwHlaTu4InBW1_yiN9E-9MKnba_SJnBySazIA'; 
                 const API_KEY = REVERSED_API_KEY.split('').reverse().join('');
 
-                const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+                const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
                 const response = await fetch(API_URL, {
                     method: 'POST',
