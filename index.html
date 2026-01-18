@@ -740,7 +740,7 @@
             });
         });
 
-        // --- CHATBOT LOGIC (SECURE PROXY) ---
+        // --- CHATBOT LOGIC (DIRECT API) ---
         let chatHistory = [];
 
         window.toggleChat = function () {
@@ -768,36 +768,22 @@
             chatHistory.push({ role: "user", parts: [{ text: message }] });
 
             try {
-                const API_KEY = 'AIzaSyBC3NlF_dk-UAeir2qVXxCGberW-GNuS4s';
-                const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+                // CẤU HÌNH API KEY TRỰC TIẾP
+                const API_KEY = 'AIzaSyBC3NlF_dk-UAeir2qVXxCGberW-GNuS4s'; 
+                const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
-                try {
-                    const response = await fetch(API_URL, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            contents: [{
-                                parts: [{
-                                    text: "Câu hỏi của người dùng: " + userMessage // Biến chứa tin nhắn người dùng nhập vào
-                                }]
-                            }]
-                        })
-                    });
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                        contents: chatHistory
+                    })
+                });
 
-                    if (!response.ok) throw new Error('API Error');
-
-                    const data = await response.json();
-                    const botReply = data.candidates[0].content.parts[0].text;
-
-                    // ... Code hiển thị botReply ra màn hình chat ...
-
-                } catch (error) {
-                    console.error("Lỗi:", error);
-                    // ... Code hiển thị thông báo lỗi cho người dùng ...
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status}`);
                 }
-
 
                 const data = await response.json();
 
