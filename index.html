@@ -56,6 +56,20 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        /* Hiệu ứng tuyết rơi theo chuột */
+        .snowflake {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            animation: snow-fall 1s linear forwards;
+        }
+        @keyframes snow-fall {
+            0% { transform: translate(0, 0); opacity: 0.8; }
+            100% { transform: translate(var(--tx), 50px); opacity: 0; }
+        }
     </style>
 
     <!-- Google Analytics -->
@@ -871,6 +885,38 @@
             </button>
         </div>
     </div>
+
+    <script>
+        // --- SNOW CURSOR EFFECT ---
+        let snowCounter = 0;
+        document.addEventListener('mousemove', function(e) {
+            snowCounter++;
+            if (snowCounter % 6 !== 0) return; // Giảm số lượng để mượt hơn (chỉ tạo hạt mỗi 6 lần di chuyển)
+
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            
+            // Vị trí theo chuột
+            snowflake.style.left = e.pageX + 'px';
+            snowflake.style.top = e.pageY + 'px';
+            
+            // Random kích thước (2px - 5px)
+            const size = Math.random() * 3 + 2;
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            
+            // Random hướng bay ngang nhẹ (-10px đến 10px)
+            const tx = (Math.random() - 0.5) * 20; 
+            snowflake.style.setProperty('--tx', `${tx}px`);
+
+            document.body.appendChild(snowflake);
+
+            // Xóa sau khi animation xong (1s) để tránh nặng máy
+            setTimeout(() => {
+                snowflake.remove();
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>
