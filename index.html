@@ -666,7 +666,116 @@
                 }
             });
         });
+
+        // --- CHATBOT LOGIC (SECURE PROXY) ---
+        let chatHistory = [];
+
+        window.toggleChat = function() {
+            const chatWindow = document.getElementById('chat-window');
+            if (chatWindow) chatWindow.classList.toggle('hidden');
+        }
+
+        window.sendMessage = async function() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Hiển thị tin nhắn user
+            appendMessage('user', message);
+            input.value = '';
+            const loadingId = appendMessage('model', 'Thinking...', true);
+
+            // Chuẩn bị dữ liệu ngữ cảnh (System Prompt)
+            const systemPrompt = `You are an AI assistant for Le Duc Duong. Answer based on this data: 
+            Career: ${JSON.stringify(careerData)}. 
+            Projects: ${JSON.stringify(projectData)}. 
+            Keep answers short and professional.`;
+
+            // Cập nhật lịch sử chat
+            chatHistory.push({ role: "user", parts: [{ text: message }] });
+
+            try {
+                // GỌI ĐẾN FILE PHP TRÊN SERVER
+                const response = await fetch('chat.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                        contents: chatHistory
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.candidates && data.candidates[0].content) {
+                    const reply = data.candidates[0].content.parts[0].text;
+                    removeMessage(loadingId);
+                    appendMessage('model', reply);
+                    chatHistory.push({ role: "model", parts: [{ text: reply }] });
+                } else {
+                    throw new Error('No response');
+                }
+            } catch (error) {
+                console.error(error);
+                removeMessage(loadingId);
+                appendMessage('model', 'Sorry, something went wrong. Please try again.');
+            }
+        }
+
+        function appendMessage(role, text, isLoading = false) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const div = document.createElement('div');
+            div.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'}`;
+            
+            const bubble = document.createElement('div');
+            bubble.className = role === 'user' 
+                ? 'bg-yellow-500 text-white rounded-2xl rounded-tr-none px-4 py-2 text-sm max-w-[80%]' 
+                : 'bg-[#374151] text-gray-200 rounded-2xl rounded-tl-none px-4 py-2 text-sm max-w-[80%]';
+            
+            if (isLoading) {
+                bubble.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Thinking...';
+                div.id = 'loading-msg';
+            } else {
+                bubble.innerText = text; 
+            }
+            div.appendChild(bubble);
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            return div.id;
+        }
+        function removeMessage(id) { const el = document.getElementById(id); if(el) el.remove(); }
     </script>
+
+    <!-- CHATBOT UI -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        <div id="chat-window" class="hidden w-[350px] h-[500px] bg-[#1f2937] border border-gray-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right">
+            <div class="bg-gradient-to-r from-yellow-500 to-orange-600 p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-robot text-white"></i>
+                    <span class="font-bold text-white text-sm">Duong's AI Assistant</span>
+                </div>
+                <button onclick="toggleChat()" class="text-white hover:text-gray-200"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-[#111827]">
+                <div class="flex justify-start">
+                    <div class="bg-[#374151] text-gray-200 rounded-2xl rounded-tl-none px-4 py-2 text-sm max-w-[80%]">
+                        Hello! I'm Duong's AI Assistant. Ask me anything about his experience! 🚀
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 bg-[#1f2937] border-t border-gray-700 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Ask me something..." 
+                       class="flex-1 bg-[#111827] border border-gray-600 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-yellow-500 transition-colors"
+                       onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()" class="w-10 h-10 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full flex items-center justify-center transition-colors shadow-lg">
+                    <i class="fas fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group">
+            <i class="fas fa-comment-dots text-2xl text-white group-hover:animate-pulse"></i>
+        </button>
+    </div>
 </body>
 
 </html>
