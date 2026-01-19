@@ -87,7 +87,7 @@
 
     <div class="relative min-h-screen w-full overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?q=80&w=2070&auto=format&fit=crop"
+            <img src="background.jpg"
                 alt="Mountain Background" class="w-full h-full object-cover opacity-90">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111827]"></div>
         </div>
@@ -899,6 +899,8 @@
             // Vị trí theo chuột
             snowflake.style.left = e.pageX + 'px';
             snowflake.style.top = e.pageY + 'px';
+            snowflake.style.left = (e.pageX / 0.8) + 'px';
+            snowflake.style.top = (e.pageY / 0.8) + 'px';
             
             // Random kích thước (2px - 5px)
             const size = Math.random() * 3 + 2;
