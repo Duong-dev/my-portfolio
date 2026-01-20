@@ -118,7 +118,7 @@
         </nav>
 
         <div class="relative z-10 container mx-auto px-4 h-[calc(100vh-80px)] flex items-center justify-center">
-            <div
+            <div style="zoom: 0.9;"
                 class="relative w-full max-w-4xl p-1 bg-gradient-to-br from-white/20 to-white/5 rounded-[2.5rem] shadow-2xl backdrop-blur-md border border-white/10">
                 <div class="bg-black/20 rounded-[2.3rem] p-8 md:p-12 text-center flex flex-col items-center gap-6">
                     <div class="relative group">
@@ -899,8 +899,6 @@
             // Vị trí theo chuột
             snowflake.style.left = e.pageX + 'px';
             snowflake.style.top = e.pageY + 'px';
-            snowflake.style.left = (e.pageX / 0.8) + 'px';
-            snowflake.style.top = (e.pageY / 0.8) + 'px';
             
             // Random kích thước (2px - 5px)
             const size = Math.random() * 3 + 2;
