@@ -66,9 +66,17 @@
             z-index: 9999;
             animation: snow-fall 1s linear forwards;
         }
+
         @keyframes snow-fall {
-            0% { transform: translate(0, 0); opacity: 0.8; }
-            100% { transform: translate(var(--tx), 50px); opacity: 0; }
+            0% {
+                transform: translate(0, 0);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(var(--tx), 50px);
+                opacity: 0;
+            }
         }
     </style>
 
@@ -87,8 +95,7 @@
 
     <div class="relative min-h-screen w-full overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="background.jpg"
-                alt="Mountain Background" class="w-full h-full object-cover opacity-90">
+            <img src="background.jpg" alt="Mountain Background" class="w-full h-full object-cover opacity-90">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111827]"></div>
         </div>
 
@@ -442,7 +449,7 @@
                 id: 'solekia',
                 logo: 'image_7d3c4d.png',
                 name: 'SOLEKIA',
-                period: '2016-2018',
+                period: '12/2017 - 03/2019',
                 role: 'Software Engineer',
                 isCurrent: false,
                 desc: [
@@ -457,7 +464,7 @@
                 id: 'pasona',
                 logo: 'image_7d43eb.png',
                 name: 'PASONA Tech',
-                period: '2018-2019',
+                period: '09/2019 - 05/2020',
                 role: 'Software Engineer',
                 isCurrent: false,
                 desc: [
@@ -472,7 +479,7 @@
                 id: 'dhl',
                 logo: 'image_7d442e.png',
                 name: 'DHL EXPRESS',
-                period: '2019-2021',
+                period: '06/2020 - 09/2021',
                 role: 'Business Analyst',
                 isCurrent: false,
                 desc: [
@@ -487,7 +494,7 @@
                 id: 'momo',
                 logo: 'image_7d44aa.png',
                 name: 'M_Service',
-                period: '2021-2024',
+                period: '10/2021 - 01/2024',
                 role: 'Senior Business Analyst',
                 isCurrent: false,
                 desc: [
@@ -502,7 +509,7 @@
                 id: 'homecredit',
                 logo: 'image_7d478f.png',
                 name: 'HOME CREDIT',
-                period: '2024-Now',
+                period: '02/2024 - Now',
                 role: 'IT Software Analyst',
                 isCurrent: true,
                 desc: [
@@ -785,7 +792,7 @@
                 // CẤU HÌNH API KEY (ĐÃ MÃ HÓA ĐƠN GIẢN)
                 // Để tránh GitHub quét và vô hiệu hóa key, ta lưu key dưới dạng ĐẢO NGƯỢC.
                 // Ví dụ: Key thật là "AIzaSy..." thì dán vào đây là "...ySzIA"
-                const REVERSED_API_KEY = 'EdFwHlaTu4InBW1_yiN9E-9MKnba_SJnBySazIA'; 
+                const REVERSED_API_KEY = 'EdFwHlaTu4InBW1_yiN9E-9MKnba_SJnBySazIA';
                 const API_KEY = REVERSED_API_KEY.split('').reverse().join('');
 
                 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
@@ -875,13 +882,15 @@
         </div>
         <div class="relative group">
             <!-- Hiệu ứng sóng lan tỏa (Ping) để thu hút sự chú ý -->
-            <span class="absolute inset-0 rounded-full bg-orange-500 opacity-75 animate-ping pointer-events-none"></span>
-            
+            <span
+                class="absolute inset-0 rounded-full bg-orange-500 opacity-75 animate-ping pointer-events-none"></span>
+
             <button onclick="toggleChat()"
                 class="relative w-14 h-14 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 z-10">
                 <i class="fas fa-comment-dots text-2xl text-white"></i>
                 <!-- Chấm đỏ thông báo giả lập -->
-                <span class="absolute top-0 right-0 block h-3.5 w-3.5 rounded-full ring-2 ring-[#111827] bg-red-500"></span>
+                <span
+                    class="absolute top-0 right-0 block h-3.5 w-3.5 rounded-full ring-2 ring-[#111827] bg-red-500"></span>
             </button>
         </div>
     </div>
@@ -889,24 +898,24 @@
     <script>
         // --- SNOW CURSOR EFFECT ---
         let snowCounter = 0;
-        document.addEventListener('mousemove', function(e) {
+        document.addEventListener('mousemove', function (e) {
             snowCounter++;
             if (snowCounter % 6 !== 0) return; // Giảm số lượng để mượt hơn (chỉ tạo hạt mỗi 6 lần di chuyển)
 
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
-            
+
             // Vị trí theo chuột
             snowflake.style.left = e.pageX + 'px';
             snowflake.style.top = e.pageY + 'px';
-            
+
             // Random kích thước (2px - 5px)
             const size = Math.random() * 3 + 2;
             snowflake.style.width = `${size}px`;
             snowflake.style.height = `${size}px`;
-            
+
             // Random hướng bay ngang nhẹ (-10px đến 10px)
-            const tx = (Math.random() - 0.5) * 20; 
+            const tx = (Math.random() - 0.5) * 20;
             snowflake.style.setProperty('--tx', `${tx}px`);
 
             document.body.appendChild(snowflake);
